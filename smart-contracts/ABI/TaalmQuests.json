@@ -1,0 +1,195 @@
+[
+  {
+    "inputs": [],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "id",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "questId",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "questName",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "questDescription",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "questContributors",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "questPrice",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "questGoal",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "questAmountRaised",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "questFee",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "uploader",
+        "type": "address"
+      }
+    ],
+    "name": "QuestCreated",
+    "type": "event"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "_questId",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_questName",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_questDescription",
+        "type": "string"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_questPrice",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_questGoal",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_questFee",
+        "type": "uint256"
+      }
+    ],
+    "name": "createQuest",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "fetchQuest",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "id",
+            "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "questId",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "questName",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "questDescription",
+            "type": "string"
+          },
+          {
+            "internalType": "uint256",
+            "name": "questContributors",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "questPrice",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "questGoal",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "questAmountRaised",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "questFee",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address payable",
+            "name": "uploader",
+            "type": "address"
+          }
+        ],
+        "internalType": "struct TaalmQuests.Quest[]",
+        "name": "",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "_questId",
+        "type": "string"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_id",
+        "type": "uint256"
+      }
+    ],
+    "name": "fundQuest",
+    "outputs": [],
+    "stateMutability": "payable",
+    "type": "function"
+  }
+]
